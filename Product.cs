@@ -31,16 +31,16 @@ namespace Zianberdin41размер
         public byte ProductDiscountAmount { get; set; }
         public int ProductQuantityInStock { get; set; }
         public string ProductDescription { get; set; }
-        public string ProductPhoto { get; set; }
+        public string ProductImage { get; set; }
         public string ProductStatus { get; set; }
-        public string ProductPhotoPath
+        public string ProductImagePath
         {
             get
             {
-                if (ProductPhoto == null)
+                if (ProductImage == null)
                     return null;
 
-                return "Товарчики/" + ProductPhoto;
+                return "Товарчики/" + ProductImage;
             }
         }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

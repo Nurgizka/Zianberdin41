@@ -16,13 +16,12 @@ namespace Zianberdin41размер
     public partial class Zianberdin41Entities : DbContext
     {
         private static Zianberdin41Entities _context;
+
         public static Zianberdin41Entities GetContext()
         {
             if(_context == null)
-            _context = new Zianberdin41Entities();
-
+                _context = new Zianberdin41Entities();
             return _context;
-            
         }
         public Zianberdin41Entities()
             : base("name=Zianberdin41Entities")
@@ -36,7 +35,7 @@ namespace Zianberdin41размер
     
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<OrderProduct> OrderProduct { get; set; }
-        public virtual DbSet<PickupPoint> PickupPoint { get; set; }
+        public virtual DbSet<PickUpPoint> PickUpPoint { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<User> User { get; set; }

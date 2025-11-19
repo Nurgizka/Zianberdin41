@@ -7,8 +7,8 @@ using System.Windows.Controls;
 
 namespace Zianberdin41размер
 {
-    internal class ZianberdinClass
+    class ZianberdinClass
     {
-        public static Frame MainFrame { get; set; }
+        public static Frame MainFrame { get; set; } 
     }
 }

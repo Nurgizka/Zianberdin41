@@ -12,19 +12,19 @@ namespace Zianberdin41размер
     using System;
     using System.Collections.Generic;
     
-    public partial class PickupPoint
+    public partial class PickUpPoint
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PickupPoint()
+        public PickUpPoint()
         {
             this.Order = new HashSet<Order>();
         }
     
-        public int PickupPointID { get; set; }
-        public string PickupPiontIndex { get; set; }
-        public string PickupPointCity { get; set; }
-        public string PickupPointStreet { get; set; }
-        public string PickupPointFlat { get; set; }
+        public int PickUpPointID { get; set; }
+        public string PickUpPointIndex { get; set; }
+        public string PickUpPointCity { get; set; }
+        public string PickUpPointStreet { get; set; }
+        public string PickUpPointFlat { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Order { get; set; }
