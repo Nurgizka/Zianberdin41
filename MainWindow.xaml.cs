@@ -23,7 +23,7 @@ namespace Zianberdin41размер
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new ProductPage());
+            MainFrame.Navigate(new AuthPage());
             ZianberdinClass.MainFrame = MainFrame; 
         }
 

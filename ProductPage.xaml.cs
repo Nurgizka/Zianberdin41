@@ -10,16 +10,35 @@ namespace Zianberdin41размер
     /// </summary>
     public partial class ProductPage : Page
     {
-        public ProductPage()
+        public ProductPage(User user)
         {
             InitializeComponent();
-            var currentServices = Zianberdin41Entities.GetContext().Product.ToList();
-
-            ProductListView.ItemsSource = currentServices;
+            if (user != null)
+            {
+                FIOTB.Text = "Вы авторизовались как: " + user.UserSurname + " " + user.UserName + " " + user.UserPatronymic;
+                switch (user.UserRole)
+                {
+                    case 1:
+                        RoleTB.Text = "Роль: Клиент";
+                        break;
+                    case 2:
+                        RoleTB.Text = "Роль: Менеджер";
+                        break;
+                    case 3:
+                        RoleTB.Text = "Роль: Администратор";
+                        break;
+                }
+            }
+            else
+            {
+                FIOTB.Text = "Вы авторизовались как: Гость";
+                RoleTB.Text = "";
+            }
+            var currentProducts = Zianberdin41Entities.GetContext().Product.ToList();
+            ProductListView.ItemsSource = currentProducts;
 
             ComboType.SelectedIndex = 0;
-            TextItemCount.Text = $"{currentServices.Count} из {Zianberdin41Entities.GetContext().Product.Count()}";
-            UpdateProducts();
+            TextItemCount.Text = $"{currentProducts.Count} из {Zianberdin41Entities.GetContext().Product.Count()}";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
