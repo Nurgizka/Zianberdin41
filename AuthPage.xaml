@@ -23,7 +23,7 @@
         <TextBox Name="LoginTB" Grid.Row="1" Grid.Column="1" FontSize="30" Width="250" Height="45" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBox>
         <TextBox Name="PassTB" Grid.Row="1" Grid.Column="1" FontSize="30" Width="250" Height="45" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBox>
         <Button Content="Войти как многоуважаемый Гость" Width="350" Height="30" x:Name="TBGost_Changed" Grid.Row="2" Grid.Column="0" Click="TBGost_Changed_Click"></Button>
-        <Button Content="Войти не как Гость" Width="350" Height="30" x:Name="TBVhod_Changed" Grid.Row="2" Grid.Column="1" Click="TBVhod_Changed_Click"></Button>
+        <Button Content="Войти как авторизованный" Width="350" Height="30" x:Name="TBVhod_Changed" Grid.Row="2" Grid.Column="1" Click="TBVhod_Changed_Click"></Button>
         <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1" Visibility="Collapsed" Name="CaptchaPanel">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <TextBlock Name="captchaOneWord" FontSize="22" Margin="30,0,0,0"></TextBlock>

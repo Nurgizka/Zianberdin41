@@ -28,21 +28,23 @@ namespace Zianberdin41размер
         public string ProductManufacturer { get; set; }
         public string ProductImporter { get; set; }
         public string ProductCategory { get; set; }
-        public byte ProductDiscountAmount { get; set; }
+        public int ProductDiscountAmount { get; set; }
         public int ProductQuantityInStock { get; set; }
+        public int ProductRealStock { get; set; }
         public string ProductDescription { get; set; }
-        public string ProductImage { get; set; }
+        public string ProductPhoto { get; set; }
         public string ProductStatus { get; set; }
-        public string ProductImagePath
+        public string ProductPhotoPath
         {
             get
             {
-                if (ProductImage == null)
+                if (ProductPhoto == null)
                     return null;
 
-                return "Товарчики/" + ProductImage;
+                return "Товарчики/" + ProductPhoto;
             }
         }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderProduct> OrderProduct { get; set; }
     }

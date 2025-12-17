@@ -20,12 +20,16 @@ namespace Zianberdin41размер
             this.Order = new HashSet<Order>();
         }
     
-        public int PickUpPointID { get; set; }
-        public string PickUpPointIndex { get; set; }
-        public string PickUpPointCity { get; set; }
-        public string PickUpPointStreet { get; set; }
-        public string PickUpPointFlat { get; set; }
-    
+        public int PickupPointID { get; set; }
+        public string PickupPointIndex { get; set; }
+        public string PickupPointCIty { get; set; }
+        public string PickupPointStreet { get; set; }
+        public string PickupPointFlat { get; set; }
+        public string PickUpFull
+        {
+            get { return PickupPointIndex + " " + PickupPointCIty + " " + PickupPointStreet + " " + PickupPointFlat; }
+        }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Order { get; set; }
     }

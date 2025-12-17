@@ -16,11 +16,11 @@ namespace Zianberdin41размер
     public partial class Zianberdin41Entities : DbContext
     {
         private static Zianberdin41Entities _context;
-
         public static Zianberdin41Entities GetContext()
         {
-            if(_context == null)
+            if (_context == null)
                 _context = new Zianberdin41Entities();
+
             return _context;
         }
         public Zianberdin41Entities()
